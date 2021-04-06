@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
 
-    <script type="module" src="./scripts/job-edit.js"></script>
+    <script type="module" src="/scripts/job-edit.js"></script>
     
   </head>
   <body id="page-job-edit">
@@ -34,7 +34,7 @@
     <div class="container flex animate-up delay-2">
         <form id="form-job"
         method="post"
-        action="/job/<%= job.id %> ">
+        action="/job/<%= job.id %>">
           <fieldset>
             <legend>Dados do Job</legend>
             <div class="separator light"></div>
@@ -45,7 +45,7 @@
                 type="text" 
                 id="name" 
                 name="name"
-                value="<%= job.name %> "
+                value="<%= job.name %>"
               />
             </div>
 
@@ -68,15 +68,15 @@
                   type="number"
                   id="total-hours" 
                   name="total-hours"
-                  value="<%= job["total-hours"] %> " />
+                  value="<%= job["total-hours"] %>" />
               </div>
             </div>
           </fieldset>
-    
+
         </form>
       </main>
       <aside class="card">
-        <img src="./images/money-color.svg" alt="Imagem de Dinheiro">
+        <img src="/images/money-color.svg" alt="Imagem de Dinheiro">
         <p>
           O valor do projeto ficou em <strong>R$ <%= job.budget.toFixed(2).replace(".", ",") %> </strong>
         </p>
@@ -91,7 +91,7 @@
             class="button gray open-modal"
             >
             <img 
-              src="./images/trash-24.svg" 
+              src="/images/trash-24.svg" 
               alt="Cancelar cadastro" 
               title="Cancelar cadastro">
           </a>
@@ -103,11 +103,11 @@
 
     <div class="modal-wrapper">
       <div class="modal">
-        <img src="./images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
+        <img src="/images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
         <h3>Excluir Job</h3>
         <p>Quer mesmo excluir esse job? <br/>
         Ele será apagado para sempre.  
-        <p>
+        </p>
         <footer>
           <a 
             class="button gray" 
@@ -120,7 +120,7 @@
       </div>
       <form 
         method="post" 
-        action="/job/delete/<%= job.id %> " 
+        action="/job/delete/{JOBID}" 
         id="delete-job"></form>
     </div>
     <!-- end modal-wrapper -->

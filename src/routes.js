@@ -133,7 +133,7 @@ const Job = {
         
         job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"])
         
-        return res.render(views + "/job-edit", { job })
+        return res.render(views + "job-edit", { job })
       },
 
       update(req, res) {
