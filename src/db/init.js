@@ -34,14 +34,16 @@ await db.run(`INSERT INTO profile(
     monthly_budget, 
     days_per_week, 
     hours_per_day, 
-    vacation_per_year
+    vacation_per_year,
+    value_hour
 ) VALUES (
     "Leandro",
     "https://avatars.githubusercontent.com/u/79161130?v=4",
     4000,
     5,
     6,
-    4
+    4,
+    70
 );`)
 
 await db.run(`INSERT INTO jobs (
